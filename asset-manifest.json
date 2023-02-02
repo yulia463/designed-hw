@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/autoHomeWork/static/css/main.f6508932.css",
-    "main.js": "/autoHomeWork/static/js/main.3f676d14.js",
-    "static/js/787.66cb4309.chunk.js": "/autoHomeWork/static/js/787.66cb4309.chunk.js",
-    "static/media/avatar.png": "/autoHomeWork/static/media/avatar.d947cb9d0d13765666b6.png",
-    "index.html": "/autoHomeWork/index.html",
-    "main.f6508932.css.map": "/autoHomeWork/static/css/main.f6508932.css.map",
-    "main.3f676d14.js.map": "/autoHomeWork/static/js/main.3f676d14.js.map",
-    "787.66cb4309.chunk.js.map": "/autoHomeWork/static/js/787.66cb4309.chunk.js.map"
+    "main.css": "/designed-hw/static/css/main.f6508932.css",
+    "main.js": "/designed-hw/static/js/main.b61cd369.js",
+    "static/js/787.50e99341.chunk.js": "/designed-hw/static/js/787.50e99341.chunk.js",
+    "static/media/avatar.png": "/designed-hw/static/media/avatar.d947cb9d0d13765666b6.png",
+    "index.html": "/designed-hw/index.html",
+    "main.f6508932.css.map": "/designed-hw/static/css/main.f6508932.css.map",
+    "main.b61cd369.js.map": "/designed-hw/static/js/main.b61cd369.js.map",
+    "787.50e99341.chunk.js.map": "/designed-hw/static/js/787.50e99341.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f6508932.css",
-    "static/js/main.3f676d14.js"
+    "static/js/main.b61cd369.js"
   ]
 }

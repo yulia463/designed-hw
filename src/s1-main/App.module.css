@@ -1,0 +1,23 @@
+.App {
+    --header_height: 60px;
+}
+
+.hw {
+    margin-left:70px;
+}
+.divider{
+    background-color: #D9D9D9;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+.hwTitle {
+    margin-left:70px;
+    margin-bottom: 10px;
+    margin-top: 107px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+}

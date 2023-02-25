@@ -1,23 +1,42 @@
 .button {
     border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 24px;
+    gap: 10px;
+    width: 132px;
+    height: 30px;
+    border: none;
 }
 
 .disabled {
-    color: #004D99;
+    color: #8b9097;
     opacity: 0.5;
+    background-color: #004D99;
 }
 
 .secondary {
     color: #0066CC;
-    border: 1px solid #0066cc;
+    background-color: #FFFFFF;
+    border: 2px solid #0066cc;
+    Width: 160px;
+    Height: 30px;
+
 }
 
 .default {
-    color:#0066CC;
+   background-color: #0066CC;
+    color: #FFFFFF;
+    Width: 132px;
+    Height: 30px;
+
 }
 
 .red {
-    background: #FF1A47;
+    background: #CC1439;
+    color: #FFFFFF;
 
 }
 

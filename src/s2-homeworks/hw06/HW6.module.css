@@ -1,5 +1,9 @@
 .buttonsContainer {
+    display: flex;
+    flex-direction: row;
+
 }
 
 .editableSpanContainer {
+    /*border: 1px solid black;*/
 }

@@ -5,19 +5,42 @@
 }
 
 .users {
+    display: flex;
+    flex-direction: column;
+
 }
 
 .buttonsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+
+
 }
 
 .thead {
+    display: flex;
+    padding: 11px 17px ;
+    background-color: #E5E5E5;
+    width: 606px;
+
+
 }
 
 .nameCol {
+    /*border: 1px solid black;*/
+
 }
 
 .ageCol {
+  padding-left: 218px;
+
+}
+.buttonsContainer > button{
+    margin: 0;
 }

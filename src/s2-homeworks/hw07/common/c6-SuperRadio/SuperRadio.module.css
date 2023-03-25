@@ -25,11 +25,6 @@
 .radio:checked::before {
     opacity: 1;
 }
-
-
-
-
-
 .label {
     display: flex;
     flex-direction: column;
@@ -52,7 +47,6 @@
 
 
     background: #FFFFFF;
-    border: 1px solid #C2C2C2;
     border-radius: 2px;
     margin-left: 158px;
 

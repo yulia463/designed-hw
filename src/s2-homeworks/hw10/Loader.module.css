@@ -1,3 +1,19 @@
-.loader {
-    /*свг и/или анимация*/
-}
+   /*свг и/или анимация*/
+   .loader {
+       border: 10px solid #f3f3f3;
+       border-top: 10px solid #512de4;
+       border-radius: 50%;
+       width: 50px;
+       height: 50px;
+       animation: spin 2s linear infinite, hide-loader 0s 3s forwards;
+   }
+
+   @keyframes spin {
+       0% { transform: rotate(0deg); border-color: #f3f3f3; }
+       100% { transform: rotate(360deg); border-color: #FFFFFF; }
+   }
+
+   @keyframes hide-loader {
+       0% { opacity: 1; }
+       100% { opacity: 0; display: none; }
+   }

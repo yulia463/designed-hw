@@ -26,7 +26,7 @@ const HW13 = () => {
     const send = (x?: boolean | null) => () => {
         const url =
             x === null
-                ? 'https://samurai.it-incubator.io/api/3.0/error' // имитация запроса на не корректный адрес
+                ? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
                 : 'https://samurai.it-incubator.io/api/3.0/homework/test'
 
         setCode('')
@@ -58,9 +58,9 @@ const HW13 = () => {
                 }
 
             })
-            .finally(()=>{
-                setInfo('')
-            })
+            // .finally(()=>{
+            //     setInfo('')
+            // })
     }
 
     return (

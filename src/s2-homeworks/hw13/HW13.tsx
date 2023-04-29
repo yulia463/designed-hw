@@ -26,7 +26,7 @@ const HW13 = () => {
     const send = (x?: boolean | null) => () => {
         const url =
             x === null
-                ? 'https://samurai.it-incubator.io/api/3.0' // имитация запроса на не корректный адрес
+                ? 'https://samurai.it-incubator.io/api/3.0/error' // имитация запроса на не корректный адрес
                 : 'https://samurai.it-incubator.io/api/3.0/homework/test'
 
         setCode('')
@@ -44,11 +44,7 @@ const HW13 = () => {
 
             })
             .catch((e) => {
-                if (e.response.status === 200) {
-                    setText("Получен статус 200");
-                    setImage(success200)
-
-                } else if (e.response.status === 500) {
+                if (e.response.status === 500) {
                     setText("эмитация ошибки на сервере ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)");
                     setImage(error500)
                 } else if (e.response.status === 400) {
@@ -59,6 +55,9 @@ const HW13 = () => {
                     setImage(errorUnknown)
                 }
 
+            })
+            .finally(()=>{
+                setInfo('')
             })
     }
 
@@ -73,7 +72,7 @@ const HW13 = () => {
                         onClick={send(true)}
                         xType={'secondary'}
                         // дописать
-                       // disabled={}
+                       disabled={info === "...loading"}
 
                     >
                         Send true
@@ -83,7 +82,7 @@ const HW13 = () => {
                         onClick={send(false)}
                         xType={'secondary'}
                         // дописать
-                     //   disabled={}
+                        disabled={info === "...loading"}
 
                     >
                         Send false
@@ -93,7 +92,7 @@ const HW13 = () => {
                         onClick={send(undefined)}
                         xType={'secondary'}
                         // дописать
-                      //  disabled={}
+                        disabled={info === "...loading"}
 
                     >
                         Send undefined
@@ -103,7 +102,7 @@ const HW13 = () => {
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
                         // дописать
-                      //  disabled={}
+                        disabled={info === "...loading"}
                     >
                         Send null
                     </SuperButton>

@@ -35,10 +35,12 @@ const HW14 = () => {
         getTechs(value)
             .then((res) => {
                 // делает студент
-
                 // сохранить пришедшие данные
 
-                //
+                    if (res?.data?.techs) {
+                        setTechs(res.data.techs);
+                    }
+                    setLoading(false);
             })
     }
 
@@ -47,8 +49,11 @@ const HW14 = () => {
         // делает студент
 
         // добавить/заменить значение в квери урла
-        // setSearchParams(
-
+        // setSearchParams()
+        const urlSearchParams = new URLSearchParams(window.location.search)
+        urlSearchParams.set('find', value)
+        window.history.replaceState(null, '', `?${urlSearchParams.toString()}`)
+        getTechs(value)
         //
     }
 

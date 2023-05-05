@@ -26,7 +26,6 @@ const HW10 = () => {
             dispatch(loadingAC(false))
         },1500)
     }
-    console.log("loading", isLoading)
 
     return (
         <div id={'hw10'}>

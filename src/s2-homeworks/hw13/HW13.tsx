@@ -39,17 +39,17 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Код 200!')
                 setImage(success200)
-                setInfo(res.data.info)
-                setText(res.data.error.text)
+                setInfo(res.data?.info)
+                setText(res.data.errorText)
 
             })
             .catch((e) => {
                 setText(e.response?.data?.errorText || e.message )
                 setInfo(e.response?.data?.info || e.name)
-                if (e.response.status === 500) {
+                if (e.response?.status === 500) {
                     setCode('Ошибка 500!')
                     setImage(error500);
-                } else if (e.response.status === 400) {
+                } else if (e.response?.status === 400) {
                     setCode("Ошибка 400!");
                     setImage(error400)
                 } else {

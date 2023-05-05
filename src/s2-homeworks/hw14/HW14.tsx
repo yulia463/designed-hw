@@ -47,14 +47,10 @@ const HW14 = () => {
     const onChangeText = (value: string) => {
         setFind(value)
         // делает студент
-
         // добавить/заменить значение в квери урла
-        // setSearchParams()
-        const urlSearchParams = new URLSearchParams(window.location.search)
-        urlSearchParams.set('find', value)
-        window.history.replaceState(null, '', `?${urlSearchParams.toString()}`)
-        getTechs(value)
-        //
+        setSearchParams(value)
+
+
     }
 
     useEffect(() => {

@@ -37,12 +37,13 @@
 .loading {
     color: red;
 }
+
 .iconContainer {
     display: flex;
     align-items: center;
 }
 
-.icon {
+.iconBord {
     width: 20px;
     height: 20px;
 }

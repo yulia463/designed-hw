@@ -1,5 +1,9 @@
 .pagination {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin-bottom: 10px;
 }
 
 .text1 {

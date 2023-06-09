@@ -3,25 +3,46 @@
 }
 
 .developer {
-
+    width: 50vw;
 }
 
 .techHeader {
     width: 50vw;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
 .developerHeader {
-
+    width: 50vw;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
 .row {
     display: flex;
+    width: 50vw;
+    border-bottom: 1px solid lightgrey;
+    margin: 5px 0;
 }
 
 .rowHeader {
     display: flex;
+    background-color: rgba(229,229,229,0.93);
+    width: 50vw;
+    height: 36px;
 }
 
 .loading {
+    color: red;
+}
+.iconContainer {
+    display: flex;
+    align-items: center;
+}
 
+.icon {
+    width: 20px;
+    height: 20px;
 }

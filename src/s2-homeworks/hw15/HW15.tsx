@@ -45,8 +45,8 @@ const HW15 = () => {
     const [count, setCount] = useState(4)
     const [idLoading, setLoading] = useState(false)
     const [totalCount, setTotalCount] = useState(100)
-    const [searchParams, setSearchParams] = useSearchParams()
-    const [techs, setTechs] = useState<TechType[]>([])
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [techs, setTechs] = useState<TechType[]>([]);
 
     const sendQuery = (params: any) => {
         setLoading(true)
@@ -65,6 +65,7 @@ const HW15 = () => {
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
+        console.log('new page>>', newPage, 'newCount', newCount);
         // setPage(
         // setCount(
         // sendQuery(

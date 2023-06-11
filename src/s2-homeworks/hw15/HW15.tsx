@@ -10,7 +10,7 @@ import SuperSort from './common/c10-SuperSort/SuperSort'
 * 1 - дописать SuperPagination
 * 2 - дописать SuperSort
 * 3 - проверить pureChange тестами
-* 3 - дописать sendQuery, onChangePagination, onChangeSort
+* 3 - дописать sendQuery, onChangePagination, onChangeSort в HW15
 * 4 - сделать стили в соответствии с дизайном
 * 5 - добавить HW15 в HW5/pages/JuniorPlus
 * */
@@ -21,7 +21,13 @@ type TechType = {
     developer: string
 }
 
-const getTechs = (params: any) => {
+type ParamsType = {
+    sort: string
+    page: number
+    count: number
+}
+
+const getTechs = (params: ParamsType) => {
     return axios
         .get<{ techs: TechType[], totalCount: number }>(
             'https://samurai.it-incubator.io/api/3.0/homework/test3',
@@ -45,45 +51,30 @@ const HW15 = () => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
+                setLoading(false)
                 // делает студент
-
                 if (res) {
                     setTechs(res.data.techs)
-                    setTotalCount(res.data.totalCount)
                 }
+                // сохранить пришедшие данные
 
-                setLoading(false)
                 //
             })
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
-
         setPage(newPage)
         setCount(newCount)
-        const pageQuery: { page?: string } = newPage !== 1 ? {page: newPage + ''} : {} // если стандарт - то не записывать в урл
-        const countQuery: { count?: string } = newCount !== 4 ? {count: newCount + ''} : {} // если стандарт - то не записывать в урл
-        const {count, page, ...lastQueries} = Object.fromEntries(searchParams)
-
-        const allQuery = {...lastQueries, ...pageQuery, ...countQuery}
-        sendQuery(allQuery)
-        setSearchParams(allQuery)
+        sendQuery({page: newPage, count: newCount})
+        setSearchParams(searchParams)
     }
 
     const onChangeSort = (newSort: string) => {
-        // делает студент
-
         setSort(newSort)
-        setPage(1) // при сортировке сбрасывать на 1 страницу
-        const sortQuery: { sort?: string } = newSort !== '' ? {sort: newSort} : {} // если стандарт - то не записывать в урл
-        const {sort, page, ...lastQueries} = Object.fromEntries(searchParams)
-
-        const allQuery = {...lastQueries, ...sortQuery}
-        sendQuery(allQuery)
-        setSearchParams(allQuery)
-
-        //
+        setPage(1)
+        sendQuery({sort: newSort, page: page, count: count})
+        setSearchParams(searchParams)
     }
 
     useEffect(() => {

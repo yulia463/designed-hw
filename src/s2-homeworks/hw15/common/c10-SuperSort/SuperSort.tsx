@@ -32,7 +32,11 @@ const SuperSort: React.FC<SuperSortPropsType> = (
         onChange(pureChange(sort, down, up))
     }
 
-    const icon = sort === down ? downIcon : sort === up ? upIcon : noneIcon
+    const icon = sort === down
+        ? downIcon
+        : sort === up
+            ? upIcon
+            : noneIcon
 
     return (
         <span
@@ -43,6 +47,7 @@ const SuperSort: React.FC<SuperSortPropsType> = (
                 id={id + '-icon-' + sort}
                 src={icon}
                 className={s.iconBord}
+                alt={'icon'}
             />
         </span>
     )
